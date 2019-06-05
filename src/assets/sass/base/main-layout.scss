@@ -1,0 +1,39 @@
+/// <reference path="../config/mixins.scss" />
+/// <reference path="../config/variables.scss" />
+
+
+//
+// Main blocks layout
+//
+
+
+$header-height: 150px;
+
+body{
+	font-family: $primary-font;
+	line-height: 1.5;
+	
+}
+
+.main-wrapper {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column; 
+	font-size: 16px;
+	color: $palette-1;
+}
+
+.main {
+	flex: 1;
+	z-index: 2;
+	@include ie(){
+		-ms-flex:none;
+		flex:none;
+	}
+}
+
+.error-message{
+	color: $red;
+	font-size: 12px;
+}
+

@@ -1,0 +1,87 @@
+@import '../config/main';
+
+header{
+    background: $header-bg;
+}
+
+.header{
+    @include flex-it(flex-end, flex-start, row, nowrap);
+    
+    font-size: $font-size-1;
+
+    &__cart{
+
+        position: relative;
+        
+
+        &-indicator{
+
+            transition: all .3s ease;
+            position: relative;
+            color: $palette-2;
+            padding: $padding-1;
+            border: 1px solid rgba(0,0,0,0);
+
+           
+
+            &::after{
+
+                content: '';
+                z-index: 1;
+                position: absolute;
+                top: calc(100% + 1px);
+                left: 0;
+                background: #fff;
+                height: 1px;
+                width: 100%;
+                
+            }
+        }
+
+        &-details{
+            transition: all .3s ease;
+            position: absolute;
+            top: 99%;
+            right: 0;
+            padding: $padding-4;
+            border: 1px solid $monochrome-3;
+            min-width: 300px;
+            background: #fff;
+
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &-item{
+
+            @include flex-it(flex-start, flex-start, row, nowrap);
+
+            figure{
+                width: 33%;
+            }
+
+            &-title{
+                font-size: $font-size-5;
+            }
+
+            &-price, &-size{
+                font-size: $font-size-2;
+            }
+
+        }
+
+        &:hover{
+            .header__cart-details{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .header__cart-indicator{
+                color: $palette-1;
+                background: #fff;
+                border: 1px solid $monochrome-3;
+                border-bottom: 1px solid rgba(0,0,0,0);
+            }
+        }
+    }
+}

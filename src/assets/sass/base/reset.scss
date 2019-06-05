@@ -1,0 +1,167 @@
+/// <reference path="../config/mixins.scss" />
+/// <reference path="../config/variables.scss" />
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit; 
+	vertical-align: baseline;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $primary-font;
+	& + p{
+		padding-top: $global-desktop-padding;
+	}
+}
+h1{
+	font-size:74px;
+}
+
+h2{
+	font-size: 50px;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	font-family: $primary-font;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	& * {
+		box-sizing: border-box;
+	}
+}
+
+footer{
+	z-index: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote {
+	&:before, &:after {
+		content: '';
+		content: none;
+	}
+}
+
+q {
+	&:before, &:after {
+		content: '';
+		content: none;
+	}
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	display: inline-block;
+	color: $palette-1;
+	text-decoration: none;
+}
+
+	a:hover {
+		text-decoration: none;
+		color: $palette-1;
+	}
+
+	a:focus {
+		outline: none;
+	}
+
+img,
+object,
+embed {
+	max-width: 100%;
+	height: auto;
+}
+
+object,
+embed {
+	height: 100%;
+}
+
+img {
+	display: inline-block;
+}
+
+	img[src=""] {
+		visibility: hidden;
+	}
+
+video {
+	width: 100%;
+	height: auto;
+}
+
+button{
+	border: none;
+	background: none;
+	outline: none;
+	cursor: pointer;
+}
+
+textarea {
+	height: auto;
+	min-height: 50px;
+	font-family: inherit;
+	resize: vertical;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+section{
+	transition: all .3s ease-in-out;
+}
+
+.clearfix {
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+.cms-bootstrap button.btn {
+	min-height: 0;
+	min-width: 0;
+
+	&:before {
+		display: none;
+	}
+}
+
+figure{
+	
+	img{
+		width: 100%;
+	}
+}
+

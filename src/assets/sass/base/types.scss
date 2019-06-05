@@ -1,0 +1,86 @@
+/// <reference path="../config/mixins.scss" />
+/// <reference path="../config/variables.scss" />
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $palette-1;
+	line-height: initial;
+}
+
+h1 {
+	font-size: 74px;
+}
+
+h2 {
+	font-size: 50px;
+}
+
+h3 {
+	font-size: 36px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 21px;
+}
+
+h6 {
+	font-size: 18px;
+}
+
+p {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+@include responsive-breakpoint($mobile-screen-width) {
+	h1 {
+		font-size: 35px;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+
+	h3 {
+		font-size: 21px;
+	}
+
+	h4 {
+		font-size: 18px;
+	}
+
+	h5 {
+		font-size: 16px;
+	}
+
+	h6 {
+		font-size: 14px;
+	}
+
+	
+}
+
+input, textarea, select, button {
+	font-family: $primary-font;
+}
+
+.palette-1{
+	color: $palette-1
+}
+
+.palette-2{
+	color: $palette-2
+}
+
+.red{
+	color: $red
+}
